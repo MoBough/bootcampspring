@@ -15,16 +15,16 @@ public class HomeController {
 		String formation = "Fullstack";
 		
 		
-		ArrayList<String> mylist = new ArrayList<String>();
-		mylist.add("OCP");
-	    mylist.add("OCP");
-	    mylist.add("Spring");
-	    mylist.add("Angular");
-		
+		ArrayList<String> names = new ArrayList<String>();
+		names.add("OCP");
+	    names.add("OCP");
+	    names.add("Spring");
+	    names.add("Angular");
+	    model.addAttribute("names", names);
 		
 		System.out.println("Methode info");
 		model.addAttribute("workshop", formation);
-		model.addAttribute("workshop2", mylist);
+		
 		return "home/info"; //le nom de la vue sous le dossier template
 	}
 	
